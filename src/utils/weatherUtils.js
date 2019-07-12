@@ -13,8 +13,9 @@ const getForecast = (latitude, longitude, callback) => {
     })
 };
 
-const getSummary = ({summary, temperature, precipProbability}) =>  `${summary}. It is currently ${temperature}` +
-    ` degrees outside with a ${precipProbability}% chance of rain.`;
+const getSummary = ({summary, temperature, precipProbability, humidity}) =>  `${summary}. It is currently ${temperature}` +
+    ` degrees outside with a ${precipProbability}% chance of rain.` +
+    ` The humidity is ${humidity*100}%.`;
 
 
 const getDarkSkyRequest = (latitude, longitude) => {
